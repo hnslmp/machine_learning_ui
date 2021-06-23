@@ -10,8 +10,8 @@ class_test = class_test{:,:};
 [class_row_test,class_col_test] = size(class_test);
 
 %% Normalisasi
-%Tanpa Normalisasi
-feature_norm_test = feature_test;
+% %Tanpa Normalisasi
+% feature_norm_test = feature_test;
 
 %Normalisasi Min-Max
 feature_norm_test = zeros(size(feature_test));
@@ -21,8 +21,8 @@ for m = 1 : feature_row_test
     end
 end
 
-%Normalisasi Z-Score
-feature_norm_test = zscore(feature_test,[],1);
+% %Normalisasi Z-Score
+% feature_norm_test = zscore(feature_test,[],1);
 %% Hyperparameter & Declare Variable
 
 %Variable
@@ -73,5 +73,5 @@ error_test_per_epoch(1,epoch_count) = sum(error_test)/feature_row_test;
 fprintf('TEST SCORE \n');
 mse_testing = sum(error_test)/feature_row_test;
 fprintf('MSE Testing        :  %.4f \n', mse_testing);
-acc_testing = true_count_test/data_count*100;
+acc_testing = true_count_test/data_count_test*100;
 fprintf('Accuracy Testing   :  %.2f \n', acc_testing);

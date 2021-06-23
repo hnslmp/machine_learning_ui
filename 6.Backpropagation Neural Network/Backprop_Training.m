@@ -10,8 +10,8 @@ class = class{:,:};
 [feature_row,feature_col] = size(feature);
 [class_row,class_col] = size(class);
 %% Normalisasi
-%Tanpa Normalisasi
-feature_norm = feature;
+% %Tanpa Normalisasi
+% feature_norm = feature;
 
 %Normalisasi Min-Max
 feature_norm = zeros(size(feature));
@@ -21,8 +21,8 @@ for m = 1 : feature_row
     end
 end
 
-%Normalisasi Z-Score
-feature_norm = zscore(feature,[],1);
+% %Normalisasi Z-Score
+% feature_norm = zscore(feature,[],1);
 %% Hyperparameter & Declare Variable
 
 %Hyperparameter
